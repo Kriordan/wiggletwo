@@ -1,0 +1,1 @@
+web: gunicorn wiggletwo.wsgi --log-file -
