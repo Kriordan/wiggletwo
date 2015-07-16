@@ -1,1 +1,46 @@
-<h1>hello</h1>
+{% extends 'portfolio/base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+    <section class="home-firstbanner">
+        <div class="home-firstbanner-carousel linedrawing-carousel">
+            {% for linedrawing in linedrawings %}
+            <div class="home-firstbanner-carousel-linedrawing">
+                {% with 'portfolio/img/home/'|add:linedrawing.image as image_static %}
+                    <img src="{% static image_static %}" alt="louis xvi chair hand drawing">
+                {% endwith %}
+                <p>{{ linedrawing.title }}</p>
+                <p>{{ linedrawing.type }}</p>
+                <p>{{ linedrawing.date }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <section class="home-secondbanner">
+        <img
+            class="home-secondbanner-portrait"
+            alt="Erica Whiteside Portrait"
+            src="{% static 'portfolio/img/home/profile_black_and_white.jpg' %}"
+        />
+
+        <div class="home-secondbanner-bio">
+            <h3>Hello</h3>
+            <p>I’m Erica, E for short. Originally based in Boston MA, I always find my roots drawing me towards historic New England. I’m currently moving back to Boston, from Brooklyn NY where I have been the Designer/Art Director for the past year at a boutique landscape firm VERDANT. I was trained as an Interior Designer at the NEW ENGLAND SCHOOL OF ART AND DESIGN, where I received a BFA. Upon graduation I won the Design Excellence Award for my Senior Thesis.</p>
+            <p>With many passions being a creative, I have found myself trying new things in each job I enter. Interning at ANTHROPOLOGIE for their visual team was a great start, I have always loved the visual arts and have been trained in fine art classes since I was eleven. I took a course in upholstery at the ELIOT SCHOOL in 2013, deconstructing a chair was a wild adventure. I truly learned the appreciation for the craft and acknowledge of the blood, sweat and tears that go into furniture making.</p>
+            <p>My true passion is residential design, this stems from my healthy obsession (hobby) with history. With each city, town, and neighborhood I enter I stop to admire the local architecture. Reviewing the lines of the roofs and lecturing my boyfriend (Keith) on when the structure was built and why the style is true to its surroundings, he is very kind to entertain me.</p>
+            <p>Working in the design field, I strive to create refreshing style derived from nature and everyday experiences. I thrive off of the collaboration with a creative team. I work diligently to produce professional projects and maintain being a perfectionist when it comes to execution. I’m easy to talk to and love to tell a good story, so please reach out and contact me.</p>
+        </div>
+
+        <div class="home-secondbanner-contact">
+            <h3>Erica Whiteside</h3>
+            <address>
+                Jamaica Plain, MA 02130<br/>
+                E: ehwhiteside@gmail.com<br/>
+                P: 508 269 3392
+            </address>
+            <button class="home-resume-button">Resume</button>
+        </div>
+    </section>
+
+{% endblock %}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Erica Whiteside</title>
+
+    {% load staticfiles %}
+    <link
+        href="{% static 'portfolio/css/normalize.css' %}"
+        rel="stylesheet"
+        type="text/css"
+    />
+    <link
+        href="{% static 'portfolio/css/slick.css' %}"
+        rel="stylesheet"
+        type="text/css"
+    />
+    <link
+        href="{% static 'portfolio/css/slick-theme.css' %}"
+        rel="stylesheet"
+        type="text/css"
+    />
+    <link
+        href="{% static 'portfolio/css/main.css' %}"
+        rel="stylesheet"
+        type="text/css"
+    />
+    <link
+        href='http://fonts.googleapis.com/css?family=Lato:300,400,700'
+        rel='stylesheet'
+        type='text/css'
+    >
+
+</head>
+
+<body>
+
+{% include 'portfolio/header.html' %}
+
+{% block content %}{% endblock %}
+
+{% include 'portfolio/footer.html' %}
+
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="{% static 'portfolio/js/slick.js' %}"></script>
+    <script src="{% static 'portfolio/js/main.js' %}"></script>
+</body>
+</html>
