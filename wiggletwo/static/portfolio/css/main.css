@@ -1,0 +1,99 @@
+body {
+  margin: auto;
+  max-width: 1200px;
+  min-width: 320px;
+  width: 100%;
+}
+/* Grays */
+body {
+  font-family: "Lato", Arial, sans-serif;
+  font-weight: 400;
+}
+.header {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 20px;
+  width: 100%;
+}
+.header-logo {
+  max-width: 400px;
+  width: 100%;
+}
+.header-logo-title {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+.header-nav {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+@media (min-width: 800px) {
+  .header-nav {
+    float: right;
+  }
+}
+.header-nav li {
+  color: #000000;
+  display: inline-block;
+  list-style-type: none;
+  padding: 20px;
+}
+.footer {
+  font-family: "Lato", Arial, sans-serif;
+  font-weight: 300;
+  text-align: center;
+}
+.footer h3 {
+  text-transform: uppercase;
+}
+.footer span {
+  font-family: "Lato", Arial, sans-serif;
+  font-weight: 400;
+}
+.home-firstbanner-carousel {
+  text-align: center;
+}
+.home-firstbanner-carousel-linedrawing img {
+  margin: auto;
+  max-height: 300px;
+  max-width: 300px;
+}
+.home-firstbanner-carousel-linedrawing p {
+  margin: 5px;
+}
+.home-firstbanner-carousel-linedrawing p:first-of-type {
+  font-size: 20px;
+  font-weight: 700;
+}
+.home-secondbanner {
+  background-color: #DDD;
+  padding: 20px;
+  text-align: center;
+}
+.home-secondbanner-portrait {
+  margin: auto;
+  max-width: 300px;
+  width: 100%;
+}
+.home-secondbanner-bio {
+  margin: auto;
+  max-width: 350px;
+  text-align: left;
+}
+.home-secondbanner-bio h3 {
+  color: #FFF;
+  text-transform: uppercase;
+}
+.home-secondbanner-contact {
+  margin: auto;
+  max-width: 350px;
+  text-align: left;
+}

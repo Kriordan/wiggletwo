@@ -1,0 +1,39 @@
+.header {
+    .box-sizing(border-box);
+
+    padding: 20px;
+    width: 100%;
+
+    &-logo {
+        max-width: 400px;
+        width: 100%;
+
+        &-title {
+            border: 0;
+            clip: rect(0 0 0 0);
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px;
+        }
+    }
+
+    &-nav {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+
+        @media ( min-width: 800px ) {
+            float: right;
+        }
+
+        li {
+            color: @black;
+            display: inline-block;
+            list-style-type: none;
+            padding: 20px;
+        }
+    }
+}
