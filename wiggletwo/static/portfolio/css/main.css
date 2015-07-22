@@ -17,6 +17,8 @@ body {
   width: 100%;
 }
 .header-logo {
+  display: block;
+  margin: auto;
   max-width: 400px;
   width: 100%;
 }
@@ -34,11 +36,6 @@ body {
   margin: 0;
   padding: 0;
   text-align: center;
-}
-@media (min-width: 800px) {
-  .header-nav {
-    float: right;
-  }
 }
 .header-nav li {
   color: #000000;
@@ -74,7 +71,7 @@ body {
   font-weight: 700;
 }
 .home-secondbanner {
-  background-color: #DDD;
+  background-color: #eee;
   padding: 20px;
   text-align: center;
 }
@@ -84,16 +81,74 @@ body {
   width: 100%;
 }
 .home-secondbanner-bio {
+  line-height: 1.4;
   margin: auto;
-  max-width: 350px;
+  max-width: 530px;
   text-align: left;
+}
+@media (min-width: 900px) {
+  .home-secondbanner-bio {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+  }
+}
+.home-secondbanner-bio a {
+  background-color: #BBBBBB;
+  color: #000000;
+  padding: 5px;
+  text-decoration: none;
+}
+.home-secondbanner-bio a:hover {
+  background-color: #888888;
 }
 .home-secondbanner-bio h3 {
   color: #FFF;
   text-transform: uppercase;
 }
 .home-secondbanner-contact {
-  margin: auto;
+  margin: 18px auto 0;
   max-width: 350px;
   text-align: left;
+}
+@media (min-width: 900px) {
+  .home-secondbanner-contact {
+    display: inline-block;
+    vertical-align: top;
+    width: 30%;
+  }
+}
+.home-secondbanner-resume {
+  display: inline-block;
+  height: 40px;
+  width: 250px;
+  margin-top: 10px;
+  vertical-align: middle;
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  backface-visibility: hidden;
+  position: relative;
+  transition-property: color;
+  transition-duration: 0.5s;
+}
+.home-secondbanner-resume:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #888888;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  transition-property: transform;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
+}
+.home-secondbanner-resume:hover {
+  color: #ffffff;
+}
+.home-secondbanner-resume:hover:before {
+  transform: scaleX(1);
 }
