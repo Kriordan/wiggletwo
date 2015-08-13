@@ -1,13 +1,33 @@
 .footer {
     .primary-font-light();
 
+    background-color: @black;
+    position: relative;
     text-align: center;
 
+    &-image {
+        width: 100%;
+    }
+
+    &-copy {
+        background: @black;
+
+        @media ( min-width: 900px ) {
+            bottom: 0;
+            position: absolute;
+            width: 100%;
+        }
+    }
+
     h3 {
+        color: @white;
+        margin: 0;
         text-transform: uppercase;
     }
 
-    span {
+    p {
         .primary-font-regular();
+
+        color: @white;
     }
 }

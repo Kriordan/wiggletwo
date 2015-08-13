@@ -1,6 +1,5 @@
 body {
   margin: auto;
-  max-width: 1200px;
   min-width: 320px;
   width: 100%;
 }
@@ -46,14 +45,32 @@ body {
 .footer {
   font-family: "Lato", Arial, sans-serif;
   font-weight: 300;
+  background-color: #000000;
+  position: relative;
   text-align: center;
 }
+.footer-image {
+  width: 100%;
+}
+.footer-copy {
+  background: #000000;
+}
+@media (min-width: 900px) {
+  .footer-copy {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+  }
+}
 .footer h3 {
+  color: #ffffff;
+  margin: 0;
   text-transform: uppercase;
 }
-.footer span {
+.footer p {
   font-family: "Lato", Arial, sans-serif;
   font-weight: 400;
+  color: #ffffff;
 }
 .home-firstbanner-carousel {
   text-align: center;
@@ -72,83 +89,94 @@ body {
 }
 .home-secondbanner {
   background-color: #eee;
-  padding: 20px;
+  padding: 0 20px;
   text-align: center;
 }
 .home-secondbanner-portrait {
   margin: auto;
-  max-width: 300px;
+  max-width: 450px;
   width: 100%;
 }
 .home-secondbanner-bio {
   line-height: 1.4;
   margin: auto;
-  max-width: 530px;
+  max-width: 800px;
   text-align: left;
 }
 @media (min-width: 900px) {
   .home-secondbanner-bio {
     display: inline-block;
+    margin-left: 100px;
     vertical-align: top;
     width: 50%;
   }
 }
 .home-secondbanner-bio a {
-  background-color: #BBBBBB;
+  background-color: #CCCCCC;
   color: #000000;
-  padding: 5px;
+  padding: 3px;
   text-decoration: none;
 }
 .home-secondbanner-bio a:hover {
-  background-color: #888888;
+  background-color: #AAAAAA;
 }
 .home-secondbanner-bio h3 {
   color: #FFF;
   text-transform: uppercase;
 }
 .home-secondbanner-contact {
-  margin: 18px auto 0;
-  max-width: 350px;
+  margin: auto;
   text-align: left;
 }
 @media (min-width: 900px) {
-  .home-secondbanner-contact {
+  .home-secondbanner-contact-address {
     display: inline-block;
     vertical-align: top;
-    width: 30%;
   }
 }
-.home-secondbanner-resume {
-  display: inline-block;
+.home-secondbanner-contact-resume {
   height: 40px;
   width: 250px;
+  margin-bottom: 20px;
+  /*margin-left: 50px;*/
+
   margin-top: 10px;
   vertical-align: middle;
-  transform: translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  backface-visibility: hidden;
-  position: relative;
-  transition-property: color;
-  transition-duration: 0.5s;
+  /*transform: translateZ(0);
+                box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+                backface-visibility: hidden;
+                position: relative;
+                transition-property: color;
+                transition-duration: 0.5s;*/
+
+  /*&:before {
+                    content: "";
+                    position: absolute;
+                    z-index: -1;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background: #888888;
+                    transform: scaleX(0);
+                    transform-origin: 0 50%;
+                    transition-property: transform;
+                    transition-duration: 0.5s;
+                    transition-timing-function: ease-out;
+                }*/
+
 }
-.home-secondbanner-resume:before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #888888;
-  transform: scaleX(0);
-  transform-origin: 0 50%;
-  transition-property: transform;
-  transition-duration: 0.5s;
-  transition-timing-function: ease-out;
+@media (min-width: 900px) {
+  .home-secondbanner-contact-resume {
+    display: inline-block;
+    vertical-align: top;
+  }
 }
-.home-secondbanner-resume:hover {
+.home-secondbanner-contact-resume:hover {
+  background-color: #777777;
   color: #ffffff;
-}
-.home-secondbanner-resume:hover:before {
-  transform: scaleX(1);
+  /*&:before {
+                        transform: scaleX(1);
+                    }*/
+
 }

@@ -27,35 +27,36 @@
 
     &-secondbanner {
         background-color: #eee;
-        padding: 20px;
+        padding: 0 20px;
         text-align: center;
 
         &-portrait {
             margin: auto;
-            max-width: 300px;
+            max-width: 450px;
             width: 100%;
         }
 
         &-bio {
             line-height: 1.4;
             margin: auto;
-            max-width: 530px;
+            max-width: 800px;
             text-align: left;
 
             @media ( min-width: 900px ) {
                 display: inline-block;
+                margin-left: 100px;
                 vertical-align: top;
                 width: 50%;
             }
 
             a {
-                background-color: #BBBBBB;
+                background-color: #CCCCCC;
                 color: @black;
-                padding: 5px;
+                padding: 3px;
                 text-decoration: none;
 
                 &:hover {
-                    background-color: #888888;
+                    background-color: #AAAAAA;
                 }
             }
 
@@ -66,51 +67,59 @@
         }
 
         &-contact {
-            margin: 18px auto 0;
-            max-width: 350px;
+            margin: auto;
             text-align: left;
 
-            @media( min-width: 900px ) {
-                display: inline-block;
-                vertical-align: top;
-                width: 30%;
-            }
-        }
+            &-address {
 
-        &-resume {
-            display: inline-block;
-            height: 40px;
-            width: 250px;
-            margin-top: 10px;
-            vertical-align: middle;
-            transform: translateZ(0);
-            box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-            backface-visibility: hidden;
-            position: relative;
-            transition-property: color;
-            transition-duration: 0.5s;
-
-            &:before {
-                content: "";
-                position: absolute;
-                z-index: -1;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background: #888888;
-                transform: scaleX(0);
-                transform-origin: 0 50%;
-                transition-property: transform;
-                transition-duration: 0.5s;
-                transition-timing-function: ease-out;
+                @media ( min-width: 900px ) {
+                    display: inline-block;
+                    vertical-align: top;
+                }
             }
 
-            &:hover {
-                color: @white;
+            &-resume {
+                height: 40px;
+                width: 250px;
+                margin-bottom: 20px;
+                /*margin-left: 50px;*/
+                margin-top: 10px;
+                vertical-align: middle;
+                /*transform: translateZ(0);
+                box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+                backface-visibility: hidden;
+                position: relative;
+                transition-property: color;
+                transition-duration: 0.5s;*/
 
-                &:before {
-                    transform: scaleX(1);
+                @media ( min-width: 900px ) {
+                    display: inline-block;
+                    vertical-align: top;
+                }
+
+                /*&:before {
+                    content: "";
+                    position: absolute;
+                    z-index: -1;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background: #888888;
+                    transform: scaleX(0);
+                    transform-origin: 0 50%;
+                    transition-property: transform;
+                    transition-duration: 0.5s;
+                    transition-timing-function: ease-out;
+                }*/
+
+                &:hover {
+                    background-color: @gray-light;
+                    color: @white;
+
+                    /*&:before {
+                        transform: scaleX(1);
+                    }*/
                 }
             }
         }
