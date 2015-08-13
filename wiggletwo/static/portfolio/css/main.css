@@ -102,23 +102,31 @@ body {
   margin: auto;
   max-width: 800px;
   text-align: left;
+  /*a {
+                background-color: #CCCCCC;
+                color: @black;
+                padding: 3px;
+                text-decoration: none;
+
+                &:hover {
+                    background-color: #AAAAAA;
+                }
+            }*/
+
 }
 @media (min-width: 900px) {
   .home-secondbanner-bio {
     display: inline-block;
-    margin-left: 100px;
+    /*margin-left: 100px;*/
+  
     vertical-align: top;
     width: 50%;
   }
 }
-.home-secondbanner-bio a {
-  background-color: #CCCCCC;
-  color: #000000;
-  padding: 3px;
-  text-decoration: none;
-}
-.home-secondbanner-bio a:hover {
-  background-color: #AAAAAA;
+@media (min-width: 1146px) {
+  .home-secondbanner-bio {
+    margin-left: 100px;
+  }
 }
 .home-secondbanner-bio h3 {
   color: #FFF;
@@ -126,7 +134,11 @@ body {
 }
 .home-secondbanner-contact {
   margin: auto;
+  padding-bottom: 20px;
   text-align: left;
+}
+.home-secondbanner-contact-address {
+  text-align: center;
 }
 @media (min-width: 900px) {
   .home-secondbanner-contact-address {
@@ -135,48 +147,19 @@ body {
   }
 }
 .home-secondbanner-contact-resume {
+  display: block;
   height: 40px;
   width: 250px;
-  margin-bottom: 20px;
-  /*margin-left: 50px;*/
-
-  margin-top: 10px;
-  vertical-align: middle;
-  /*transform: translateZ(0);
-                box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-                backface-visibility: hidden;
-                position: relative;
-                transition-property: color;
-                transition-duration: 0.5s;*/
-
-  /*&:before {
-                    content: "";
-                    position: absolute;
-                    z-index: -1;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    bottom: 0;
-                    background: #888888;
-                    transform: scaleX(0);
-                    transform-origin: 0 50%;
-                    transition-property: transform;
-                    transition-duration: 0.5s;
-                    transition-timing-function: ease-out;
-                }*/
-
+  margin: 20px auto 0;
 }
 @media (min-width: 900px) {
   .home-secondbanner-contact-resume {
     display: inline-block;
+    margin-left: 50px;
     vertical-align: top;
   }
 }
 .home-secondbanner-contact-resume:hover {
   background-color: #777777;
   color: #ffffff;
-  /*&:before {
-                        transform: scaleX(1);
-                    }*/
-
 }
