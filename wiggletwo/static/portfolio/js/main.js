@@ -14,6 +14,6 @@ $(document).ready(function(){
         ]
     });
 
-    $('.resume-popover').fancybox();
+    $('.home-resume-popover').fancybox();
 
 });
