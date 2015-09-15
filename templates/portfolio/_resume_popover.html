@@ -1,74 +1,71 @@
 {% load staticfiles %}
+<div class="resume-popover">
+    <h1>Resume</h1>
 
-<h1>Resume</h1>
+    <section class="resume-popover-experience">
+        <h2>Experience</h2>
 
-<h2>Experience</h2>
+        {% for job in resume.experience %}
+            <div class="resume-popover-experience-block">
+                <h2>{{ job.company }}</h2>
+                <h3>{{ job.title }}</h3>
+                <h3>{{ job.location_and_duration }}</h3>
+                <p>{{ job.description }}</p>
+            </div>
+        {% endfor %}
+    </section>
 
-<h2>Verdant Gardens Design</h2>
-<h3>Art Director &#8211; Designer</h3>
-<h3>New York, NY Summer 2014 &#8211; Present</h3>
-<p>Research and develop visioning for new projects, transform into schematic designs. Create spatial and conceptual plans with focus on the Client’s needs/wants. Develop well thought out hand and 3D renderings, these being time sensitive for each project’s budget and the client’s aesthetic. Create presentations for new and existing projects from; plant proposals, material proposals, SD proposals, and DD proposals. Manage the design process and coordinate with coworkers and Principal on the project’s goals and deadlines. Create and revise projects budgets; design, installation and materials. Create detailed presentation documents for; Building Boards, Management Companies, and D.O.B. Draft Construction Documents for custom millwork, fencing, trellising, and metal work etc. Coordinate with outside contractors and assist in management with the installation process. Assist in management of project installations, coordinate with Principal on deadlines and oversee installation teams progress.</p>
+    <hr />
 
-<h2>Holmstead Designs</h2>
-<h3>Self Employed &#8211; Founder</h3>
-<h3>Boston/NYC 2013 &#8211; Present</h3>
-<p>East Coast based visual and creative brand. Designing, curating and creating handmade installation projects and products. Working with clients on private events, interior/ furniture make-overs and diy editorials. Each project is imagined and inspired by the clients aesthetics, ranging from wedding decor, to custom throw pillows, and stationary. With valuable knowledge of materials and the ways of manipulation, we fabricate stunning hand-crafted items that undoubtedly become conversation pieces in each space. We strive for perfection and achieve completion of unique creations.</p>
+    <section class="resume-popover-education">
+        <h2>Education</h2>
 
-<h2>Anthropologie</h2>
-<h3>Temp &#8211; Visual Sales Associate for Store Opening</h3>
-<h3>Chestnut Hill, MA Fall 2013</h3>
-<p>Assisted in the visual display creation and installation to support store opening. Conceptualized and collaborated in the creation of 3-dimensional displays/artwork, large and small. Incorporated personal artistic vision. Created with customer experience in mind. Manipulation of materials, with knowledgeable use of power tools.</p>
+        {% for schooling in resume.education %}
+            <div class="resume-popover-education-block">
+                <h3>{{ schooling.school }}</h3>
+                <h3>{{ schooling.location_and_duration }}</h3>
+                <h3>{{ schooling.focus_of_study }}</h3>
+                <p>{{ schooling.notes }}</p>
+            </div>
+        {% endfor %}
+    </section>
 
-<h2>Mar Silver Design</h2>
-<h3>Freelance &#8211; Draftsperson and Materials Library Manager</h3>
-<h3>Westport, CT Winter &#8211; Spring 2013</h3>
-<p>Managed and maintained the materials library while creating an efficient management system. Updated and maintained lighting and furniture plans and schedules. Collaborated on custom designs with architects concerning millwork and furniture. Initiated hand and computer renderings for client’s final proposals.</p>
+    <hr />
 
-<h2>Mary Delaney Interior Design</h2>
-<h3>Design Assistant &#8211; High End Residential Firm</h3>
-<h3>New York, NY Spring &#8211; Fall 2012</h3>
-<p>Created plans and interior elevations. Assisted in design and creation of custom millwork, furniture, and lighting. Worked hands-on with installations and collaborated with clients, contractors, and vendors. Managed sourcing, research, purchase orders, schedules, and quotes.</p>
+    <section class="resume-popover-skills">
+        <h2>Skills</h2>
 
-<hr />
+        <p>{{ resume.skills }}</p>
+    </section>
 
-<h2>Education</h2>
+    <hr />
 
-<h3>New England School of Art and Design at Suffolk University</h3>
-<h3>Boston, MA Fall 2006 &#8211; Spring 2011</h3>
-<h3>BFA Interior Design</h3>
-<p>Senior Thesis Design Excellence Award in Interior Design</p>
+    <section class="resume-popover-biography">
+        <h2>About Me</h2>
 
-<hr />
+        <p>{{ resume.biography }}</p>
+    </section>
 
-<h2>Skills</h2>
+    <hr />
 
-<p>Conceptual Visioning, Urban Landscape Design, Residential Design, Retail Display, Project Management, 3D/Hand Drafting and Rendering, Fine Motor
-Skills, Auto Cad, Auto Desk Revit, Adobe Creative Suite, Sketch Up, Wordpress, and Microsoft Office.</p>
+    <section class="resume-popover-internships">
+        <h2>Internships</h2>
 
-<hr />
+        {% for internship in resume.internships %}
+            <div class="resume-popover-internships-block">
+                <h2>{{ internship.company }}</h2>
+                <h3>{{ internship.title }}</h3>
+                <h3>{{ internship.location_and_duration }}</h3>
+                <p>{{ internship.description }}</p>
+            </div>
+        {% endfor %}
+    </section>
 
-<h2>About Me</h2>
-
-<p>I create refreshing style derived from nature and everyday experiences. I thrive off of the collaboration with a creative team. I work diligently to produce professional projects and maintain being a perfectionist when it comes to execution.</p>
-
-<hr />
-
-<h2>Internships</h2>
-
-<h2>Anthropologie</h2>
-<h3>Visual Display</h3>
-<h3>Dedham, MA 2011</h3>
-<p>Created by hand, in-store visual installations. Twelve installations, ranging from 10’x10’to 40’x40’. Worked collaboratively with creative team on a daily basis to ensure each installation had a unique aspect to the design.</p>
-
-<h2>Zamforia</h2>
-<h3>Creative &#8211; Visual Design</h3>
-<h3>Quincy, MA 2009</h3>
-<p>Collaborated with client for design and merchandising strategy. Created unique customer experience, complete with custom mosaic countertop. Interior design renovation of store space. Website design assistance. Merchandising design, T-shirts and promo posters.</p>
-
-<a
-    class="resume-popover-download"
-    download
-    href="{% static 'portfolio/downloads/erica_whiteside_resume_2015.pdf' %}"
->
-    Download Resume
-</a>
+    <a
+        class="resume-popover-download"
+        download
+        href="{% static 'portfolio/downloads/erica_whiteside_resume_2015.pdf' %}"
+    >
+        Download Resume
+    </a>
+</div>

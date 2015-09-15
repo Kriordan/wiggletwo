@@ -167,6 +167,33 @@ body {
   background-color: #777777;
   color: #ffffff;
 }
+.resume-popover {
+  margin: auto;
+  max-width: 640px;
+}
+.resume-popover-experience-block h2 {
+  margin: 20px 0 0 0;
+}
+.resume-popover-experience-block h3 {
+  font-weight: 400;
+  margin: 0;
+}
+.resume-popover-education-block h3 {
+  margin: 0;
+}
+.resume-popover-education-block h3:not(:first-of-type) {
+  font-weight: 400;
+}
+.resume-popover-education-block p {
+  margin: 0;
+}
+.resume-popover-internships-block h2 {
+  margin: 20px 0 0 0;
+}
+.resume-popover-internships-block h3 {
+  font-weight: 400;
+  margin: 0;
+}
 .resume-popover-download {
   background-color: #cccccc;
   color: #000000;
