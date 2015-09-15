@@ -80,10 +80,13 @@ body {
   max-height: 300px;
   max-width: 300px;
 }
-.home-firstbanner-carousel-linedrawing p {
-  margin: 5px;
+.home-firstbanner-carousel-copy {
+  margin-top: 20px;
 }
-.home-firstbanner-carousel-linedrawing p:first-of-type {
+.home-firstbanner-carousel-copy p {
+  margin: 0;
+}
+.home-firstbanner-carousel-copy p:first-of-type {
   font-size: 20px;
   font-weight: 700;
 }
