@@ -47,15 +47,19 @@ body {
   font-family: "Lato", Arial, sans-serif;
   font-weight: 300;
   background-color: #000000;
-  background-image: url(../img/footer/Footer_Background.jpg);
   position: relative;
   text-align: center;
 }
 .footer-image {
+  display: block;
   width: 100%;
+}
+.footer-copy {
+  background-color: #000000;
 }
 @media (min-width: 900px) {
   .footer-copy {
+    background-color: transparent;
     bottom: 0;
     position: absolute;
     width: 100%;
@@ -65,8 +69,6 @@ body {
   text-decoration: none;
 }
 .footer-copy-socialcollection img {
-  background-color: #ffffff;
-  border-radius: 50%;
   margin: 0 10px;
   width: 50px;
 }
@@ -80,6 +82,8 @@ body {
   font-family: "Lato", Arial, sans-serif;
   font-weight: 400;
   color: #ffffff;
+  margin: 0;
+  padding: 16px 0;
 }
 .home-firstbanner {
   margin: 35px 0 75px;
@@ -182,6 +186,9 @@ body {
     vertical-align: top;
   }
 }
+.home-secondbanner-contact a {
+  text-decoration: none;
+}
 .home-secondbanner-contact-resume {
   -webkit-appearance: none;
   background-color: #eee;
@@ -191,7 +198,6 @@ body {
   font-size: 30px;
   margin: 20px auto 0;
   padding: 0 0 14px 5px;
-  text-decoration: none;
   text-transform: uppercase;
   width: 200px;
 }

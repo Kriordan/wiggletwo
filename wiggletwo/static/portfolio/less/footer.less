@@ -2,17 +2,19 @@
     .primary-font-light();
 
     background-color: @black;
-    background-image: url(../img/footer/Footer_Background.jpg);
     position: relative;
     text-align: center;
 
     &-image {
+        display: block;
         width: 100%;
     }
 
     &-copy {
+        background-color: @black;
 
         @media ( min-width: 900px ) {
+            background-color: transparent;
             bottom: 0;
             position: absolute;
             width: 100%;
@@ -25,8 +27,6 @@
             }
 
             img {
-                background-color: @white;
-                border-radius: 50%;
                 margin: 0 10px;
                 width: 50px;
             }
@@ -44,5 +44,7 @@
         .primary-font-regular();
 
         color: @white;
+        margin: 0;
+        padding: 16px 0;
     }
 }
