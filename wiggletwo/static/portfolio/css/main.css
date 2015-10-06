@@ -12,13 +12,14 @@ body {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 20px;
+  padding: 0 20px;
   width: 100%;
 }
 .header-logo {
   display: block;
   margin: auto;
-  max-width: 400px;
+  max-width: 600px;
+  padding: 40px 0;
   width: 100%;
 }
 .header-logo-title {
@@ -46,14 +47,12 @@ body {
   font-family: "Lato", Arial, sans-serif;
   font-weight: 300;
   background-color: #000000;
+  background-image: url(../img/footer/Footer_Background.jpg);
   position: relative;
   text-align: center;
 }
 .footer-image {
   width: 100%;
-}
-.footer-copy {
-  background: #000000;
 }
 @media (min-width: 900px) {
   .footer-copy {
@@ -62,9 +61,19 @@ body {
     width: 100%;
   }
 }
+.footer-copy-socialcollection a {
+  text-decoration: none;
+}
+.footer-copy-socialcollection img {
+  background-color: #ffffff;
+  border-radius: 50%;
+  margin: 0 10px;
+  width: 50px;
+}
 .footer h3 {
   color: #ffffff;
-  margin: 0;
+  font-weight: 300;
+  margin: 0 0 16px;
   text-transform: uppercase;
 }
 .footer p {
@@ -72,13 +81,16 @@ body {
   font-weight: 400;
   color: #ffffff;
 }
+.home-firstbanner {
+  margin: 35px 0 75px;
+}
 .home-firstbanner-carousel {
   text-align: center;
 }
 .home-firstbanner-carousel-linedrawing img {
   margin: auto;
-  max-height: 300px;
-  max-width: 300px;
+  max-height: 450px;
+  max-width: 480px;
 }
 .home-firstbanner-carousel-copy {
   margin-top: 20px;
@@ -96,6 +108,7 @@ body {
   text-align: center;
 }
 .home-secondbanner-portrait {
+  display: inline-block;
   margin: auto;
   max-width: 450px;
   width: 100%;
@@ -109,8 +122,7 @@ body {
 @media (min-width: 900px) {
   .home-secondbanner-bio {
     display: inline-block;
-    /*margin-left: 100px;*/
-  
+    padding: 20px;
     vertical-align: top;
     width: 50%;
   }
@@ -121,16 +133,18 @@ body {
   }
 }
 .home-secondbanner-bio-link {
-  background-color: #CCCCCC;
   color: #000000;
+  font-weight: 700;
   padding: 3px;
   text-decoration: none;
 }
 .home-secondbanner-bio-link:hover {
-  background-color: #AAAAAA;
+  background-color: #d4ecf6;
 }
 .home-secondbanner-bio h3 {
   color: #FFF;
+  font-size: 30px;
+  margin: 0;
   text-transform: uppercase;
 }
 .home-secondbanner-contact {
@@ -144,28 +158,35 @@ body {
 @media (min-width: 900px) {
   .home-secondbanner-contact-address {
     display: inline-block;
+    text-align: left;
     vertical-align: top;
   }
 }
 .home-secondbanner-contact-resume {
   -webkit-appearance: none;
+  background-color: #eee;
   border: none;
   color: #000000;
   display: block;
-  height: 50px;
-  width: 250px;
+  font-size: 30px;
   margin: 20px auto 0;
+  padding: 0 0 14px 5px;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 200px;
 }
 @media (min-width: 900px) {
   .home-secondbanner-contact-resume {
     display: inline-block;
-    margin-left: 50px;
+    margin: -7px 0 0 20px;
+    max-width: 250px;
+    text-align: left;
     vertical-align: top;
   }
 }
 .home-secondbanner-contact-resume:hover {
-  background-color: #777777;
-  color: #ffffff;
+  background-color: #d4ecf6;
+  color: #000000;
 }
 .resume-popover {
   margin: auto;

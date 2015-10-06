@@ -2,6 +2,7 @@
     .primary-font-light();
 
     background-color: @black;
+    background-image: url(../img/footer/Footer_Background.jpg);
     position: relative;
     text-align: center;
 
@@ -10,18 +11,32 @@
     }
 
     &-copy {
-        background: @black;
 
         @media ( min-width: 900px ) {
             bottom: 0;
             position: absolute;
             width: 100%;
         }
+
+        &-socialcollection {
+
+            a {
+                text-decoration: none;
+            }
+
+            img {
+                background-color: @white;
+                border-radius: 50%;
+                margin: 0 10px;
+                width: 50px;
+            }
+        }
     }
 
     h3 {
         color: @white;
-        margin: 0;
+        font-weight: 300;
+        margin: 0 0 16px;
         text-transform: uppercase;
     }
 

@@ -1,6 +1,7 @@
 .home {
 
     &-firstbanner {
+        margin: 35px 0 75px;
 
         &-carousel {
             text-align: center;
@@ -9,8 +10,8 @@
 
                 img {
                     margin: auto;
-                    max-height: 300px;
-                    max-width: 300px;
+                    max-height: 450px;
+                    max-width: 480px;
                 }
             }
 
@@ -35,6 +36,7 @@
         text-align: center;
 
         &-portrait {
+            display: inline-block;
             margin: auto;
             max-width: 450px;
             width: 100%;
@@ -48,7 +50,7 @@
 
             @media ( min-width: 900px ) {
                 display: inline-block;
-                /*margin-left: 100px;*/
+                padding: 20px;
                 vertical-align: top;
                 width: 50%;
             }
@@ -58,18 +60,20 @@
             }
 
             &-link {
-                background-color: #CCCCCC;
                 color: @black;
+                font-weight: 700;
                 padding: 3px;
                 text-decoration: none;
 
                 &:hover {
-                    background-color: #AAAAAA;
+                    background-color: #d4ecf6;
                 }
             }
 
             h3 {
                 color: #FFF;
+                font-size: 30px;
+                margin: 0;
                 text-transform: uppercase;
             }
         }
@@ -84,29 +88,38 @@
 
                 @media ( min-width: 900px ) {
                     display: inline-block;
+                    text-align: left;
                     vertical-align: top;
+                    // width: 50%;
                 }
             }
 
             &-resume {
                 -webkit-appearance: none;
 
+                background-color: #eee;
                 border: none;
                 color: @black;
                 display: block;
-                height: 50px;
-                width: 250px;
+                font-size: 30px;
                 margin: 20px auto 0;
+                padding: 0 0 14px 5px;
+                text-decoration: none;
+                text-transform: uppercase;
+                width: 200px;
 
                 @media ( min-width: 900px ) {
                     display: inline-block;
-                    margin-left: 50px;
+                    margin: -7px 0 0 20px;
+                    max-width: 250px;
+                    text-align: left;
+                    // width: 49%;
                     vertical-align: top;
                 }
 
                 &:hover {
-                    background-color: @gray-light;
-                    color: @white;
+                    background-color: #d4ecf6;
+                    color: @black;
                 }
             }
         }
