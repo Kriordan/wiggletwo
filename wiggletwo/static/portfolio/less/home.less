@@ -2,6 +2,7 @@
 
     &-firstbanner {
         margin: 35px 0 75px;
+        position: relative;
 
         &-carousel {
             text-align: center;
@@ -26,6 +27,27 @@
                         font-weight: 700;
                     }
                 }
+            }
+        }
+
+        &-scrollarrow {
+            bottom: 30px;
+            position: fixed;
+            right: 30px;
+
+            &:hover {
+                background-color: #d4ecf6;
+                padding-left: 30px;
+            }
+
+            &.hidearrow {
+                display: none;
+            }
+
+            img {
+                .rotate(90deg);
+
+                width: 30px;
             }
         }
     }
