@@ -94,8 +94,14 @@ body {
 }
 .home-firstbanner-carousel-linedrawing img {
   margin: auto;
-  max-height: 450px;
-  max-width: 480px;
+  max-height: 300px;
+  max-width: 300px;
+}
+@media (min-width: 600px) {
+  .home-firstbanner-carousel-linedrawing img {
+    max-height: 450px;
+    max-width: 480px;
+  }
 }
 .home-firstbanner-carousel-copy {
   margin-top: 20px;
