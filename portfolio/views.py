@@ -9,3 +9,6 @@ RESUME = yaml.load( open( 'yamlfiles/portfolio/resume.yml' ) )
 
 def home(request):
     return render(request, 'portfolio/home.html', { 'linedrawings' : LINEDRAWINGS, 'resume' : RESUME } )
+
+def lookbook(request):
+    return render(request, 'portfolio/lookbook.html')
