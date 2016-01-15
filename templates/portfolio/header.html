@@ -1,10 +1,29 @@
 {% load staticfiles %}
 
 <header class="header">
-    <!-- <ul class="header-nav">
-        <a href="#"><li>Portfolio</li></a>
-        <a href="#"><li>Blog</li></a>
-    </ul> -->
+    <ul class="header-nav">
+        <a href="{% url 'home' %}">
+            <li
+                {% if title == 'home' %}
+                    class="active"
+                {% endif %}
+            >
+                Home
+            </li>
+        </a>
+        <a href="{% url 'portfolio' %}">
+            <li
+                {% if title == 'portfolio' %}
+                    class="active"
+                {% endif %}
+            >
+                Portfolio
+            </li>
+        </a>
+        <a href="#">
+            <li>Blog</li>
+        </a>
+    </ul>
     <a href="{% url 'home' %}">
         <img
             class="header-logo"

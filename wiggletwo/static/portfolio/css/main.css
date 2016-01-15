@@ -36,12 +36,20 @@ body {
   margin: 0;
   padding: 0;
   text-align: center;
+  text-transform: uppercase;
 }
 .header-nav li {
   color: #000000;
   display: inline-block;
   list-style-type: none;
   padding: 20px;
+}
+.header-nav li.active,
+.header-nav li:hover {
+  background-color: #d4ecf6;
+}
+.header-nav a {
+  text-decoration: none;
 }
 .footer {
   font-family: "Lato", Arial, sans-serif;
@@ -219,6 +227,23 @@ body {
 .home-secondbanner-contact-resume:hover {
   background-color: #d4ecf6;
   color: #000000;
+}
+.portfolio-main-carousel-project img {
+  margin: auto;
+  max-width: 600px;
+}
+.portfolio-main-carousel-copy {
+  text-align: center;
+}
+.portfolio-main-carousel-copy p {
+  color: #000000;
+}
+.portfolio-popover-containers-container {
+  max-width: 600px;
+}
+.portfolio-popover-containers-container img {
+  display: block;
+  padding: 20px;
 }
 .resume-popover {
   margin: auto;

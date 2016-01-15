@@ -27,12 +27,22 @@
         margin: 0;
         padding: 0;
         text-align: center;
+        text-transform: uppercase;
 
         li {
             color: @black;
             display: inline-block;
             list-style-type: none;
             padding: 20px;
+
+            &.active,
+            &:hover {
+                background-color: #d4ecf6;
+            }
+        }
+
+        a {
+            text-decoration: none;
         }
     }
 }

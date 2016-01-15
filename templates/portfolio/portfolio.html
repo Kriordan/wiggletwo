@@ -1,0 +1,40 @@
+{% extends 'portfolio/base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+
+    <section class="portfolio-main">
+        <div class="portfolio-main-carousel portfolio-carousel">
+            {% for project in projects %}
+                <a class="portfolio-project-popover" href="#{{ project.fancyname }}">
+                    <div class="portfolio-main-carousel-project">
+                        {% with 'portfolio/img/portfolio/'|add:project.mainimage as image_static %}
+                            <img src="{% static image_static %}" alt="{{ project.name }}">
+                        {% endwith %}
+                        <div class="portfolio-main-carousel-copy">
+                            <p>{{ project.name }}</p>
+                            <p>{{ project.year }}</p>
+                        </div>
+                    </div>
+                </a>
+            {% endfor %}
+        </div>
+    </section>
+
+    <section class="portfolio-popover-containers">
+        {% for project in projects %}
+            <div
+                id="{{ project.fancyname }}"
+                class="portfolio-popover-containers-container"
+                style="display: none;"
+            >
+                {% for detailimage in project.detailimages %}
+                    {% with 'portfolio/img/portfolio/'|add:detailimage as detailimage_static %}
+                        <img src="{% static detailimage_static %}">
+                    {% endwith %}
+                {% endfor %}
+            </div>
+        {% endfor %}
+    </section>
+
+{% endblock %}

@@ -27,4 +27,14 @@ $(document).ready(function(){
         }
     });
 
+    // Portfolio
+
+    $('.portfolio-carousel').slick({
+        autoplay: false,
+        dots: true,
+        slidesToShow: 1
+    });
+
+    $('.portfolio-project-popover').fancybox();
+
 });
